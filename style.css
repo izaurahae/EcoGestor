@@ -1,0 +1,160 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0fdf4;
+    color: #1b4332;
+    line-height: 1.6;
+    padding: 20px;
+}
+  
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in;
+}
+  
+header h1 {
+    font-size: 2rem;
+    color: #2d6a4f;
+    text-align: center;
+}
+  
+header p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #40916c;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+  
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+  
+label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+  
+input, select {
+    padding: 12px;
+    border: 2px solid #95d5b2;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    min-height: 45px;  /* Tamanho consistente */
+}
+  
+input:focus, select:focus {
+    border-color: #52b788;
+    outline: none;
+    box-shadow: 0 0 5px rgba(82, 183, 136, 0.5);  /* Foco mais visível */
+}
+  
+button {
+    padding: 12px;
+    background-color: #40916c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+  
+button:hover {
+    background-color: #2d6a4f;
+    transform: scale(1.05);  /* Efeito de ampliar o botão */
+}
+  
+#resultado {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #d8f3dc;
+    border-left: 5px solid #2d6a4f;
+    border-radius: 10px;
+}
+  
+#resultado ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+  
+.pdf-button {
+    margin-top: 15px;
+    text-align: center;
+}
+  
+.hidden {
+    display: none;
+}
+  
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+  
+/* Responsivo */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+}
+  
+/* Animação suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mascote {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.mascote img {
+    width: 100px;
+    animation: bounce 2s infinite;
+}
+  
+#falaTico {
+    font-style: italic;
+    color: #2d6a4f;
+    margin-top: 10px;
+}
+  
+/* Mascote bounce */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Ajuste na animação para ser mais sutil */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoGestor 🌿</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>EcoGestor 🌿</h1>
+      <p>Descubra como tornar seu consumo mais sustentável</p>
+    </header>
+
+    <main>
+        <div class="mascote">
+            <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Tico, o mascote tartaruga" />
+            <p id="falaTico">Oi! Eu sou o Tico! Vamos cuidar do planeta juntos?</p>
+        </div>
+
+        <form id="ecoForm">
+         
+          <div class="form-group">
+            <label for="banhos">Quantos banhos você toma por dia?</label>
+            <input type="number" id="banhos" min="0" required />
+          </div>
+      
+          <div class="form-group">
+            <label for="lampadas">Você usa lâmpadas de LED?</label>
+            <select id="lampadas">
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="lixo">Você separa o lixo reciclável?</label>
+            <select id="lixo">
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </div>
+      
+         
+          <div class="form-group">
+            <label for="aparelhos">Desliga os aparelhos da tomada quando não usa?</label>
+            <select id="aparelhos">
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="sacola">Leva sacola reutilizável ao mercado?</label>
+            <select id="sacola">
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="reuso">Reutiliza água (chuva, máquina de lavar etc)?</label>
+            <select id="reuso">
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </div>
+      
+          <button type="submit">Ver Resultado</button>
+        </form>
+      
+        <section id="resultado" class="hidden"></section>
+      
+        <div class="pdf-button">
+          <button onclick="gerarPDF()">📄 Baixar Dicas em PDF</button>
+        </div>
+      </main>
+      
+    <footer>
+      <p>Feito com 💚 para o futuro do planeta</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
